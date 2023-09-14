@@ -1,4 +1,4 @@
-const getUrl = require('../../lib/getUrl')
+import getUrl from '../../lib/getUrl'
 
 describe('getUrl', () => {
   let webhookUrl

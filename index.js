@@ -1,6 +1,6 @@
-const lifecycleVerifyConditions = require('./lib/lifecycle-verify-conditions')
-const lifecycleSuccess = require('./lib/lifecycle-success')
-const canNotify = require('./lib/canNotify')
+import lifecycleVerifyConditions from './lib/lifecycle-verify-conditions.js';
+import lifecycleSuccess from './lib/lifecycle-success.js';
+import canNotify from './lib/canNotify.js';
 
 let verified = false
 
@@ -36,4 +36,4 @@ const success = async (pluginConfig, context) => {
   }
 }
 
-module.exports = { verifyConditions, generateNotes, success }
+export { verifyConditions, generateNotes, success }

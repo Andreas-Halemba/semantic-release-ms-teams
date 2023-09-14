@@ -1,6 +1,5 @@
 /* eslint-disable jest/no-conditional-expect */
-
-const lifecycleVerifyConditions = require('../../lib/lifecycle-verify-conditions')
+import lifecycleVerifyConditions from '../../lib/lifecycle-verify-conditions'
 
 describe('lifecycleVerifyConditions', () => {
   let pluginConfig

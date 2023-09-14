@@ -1,4 +1,4 @@
-const canNotify = require('../../lib/canNotify')
+import canNotify from '../../lib/canNotify'
 
 describe('canNotify', () => {
   let context

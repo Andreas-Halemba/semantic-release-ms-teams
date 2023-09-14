@@ -1,12 +1,10 @@
-const { verifyConditions, generateNotes, success } = require('../index')
+import { verifyConditions, generateNotes, success } from "../index.js"
+import lifecycleVerifyConditions from "../lib/lifecycle-verify-conditions"
+import lifecycleSuccess from "../lib/lifecycle-success"
+import canNotify from "../lib/canNotify"
 
-const lifecycleVerifyConditions = require('../lib/lifecycle-verify-conditions')
 jest.mock('../lib/lifecycle-verify-conditions', () => jest.fn())
-
-const lifecycleSuccess = require('../lib/lifecycle-success')
 jest.mock('../lib/lifecycle-success', () => jest.fn())
-
-const canNotify = require('../lib/canNotify')
 jest.mock('../lib/canNotify', () => jest.fn())
 
 describe('index', () => {
