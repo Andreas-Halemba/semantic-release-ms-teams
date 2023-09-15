@@ -1,6 +1,6 @@
 {
   "name": "@iu/semantic-release-ms-teams",
-  "version": "2.1.0",
+  "version": "2.1.1-0",
   "description": "A plugin for semantic-release which publish release notes in a Microsoft Teams channel",
   "license": "MIT",
   "engines": {
