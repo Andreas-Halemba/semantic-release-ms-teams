@@ -1,0 +1,29 @@
+{
+    "branches": [
+        "main"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "CHANGELOG.md",
+                    "package.json"
+                ],
+                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+            }
+        ],
+        [
+            "@iu/semantic-release-ms-teams",
+            {
+                "webhookUrl": "https://iubhfs.webhook.office.com/webhookb2/ac9ae722-5d23-456b-b514-86d0f525dc95@f419c9fe-f7b0-4d87-bee8-e8dfb2190cab/IncomingWebhook/90837faebba146f580ae691ccfcc163a/2e43fea9-4db3-4c55-88fb-26080f20d3b8",
+                "title": "A new version has been released",
+                "showContributors": true,
+                "notifyInDryRun": false
+            }
+        ]
+    ]
+}
