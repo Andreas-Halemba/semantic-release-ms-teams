@@ -1,6 +1,6 @@
-import lifecycleVerifyConditions from './lib/lifecycle-verify-conditions.js';
-import lifecycleSuccess from './lib/lifecycle-success.js';
-import canNotify from './lib/canNotify.js';
+import lifecycleVerifyConditions from './lib/lifecycle-verify-conditions.js'
+import lifecycleSuccess from './lib/lifecycle-success.js'
+import canNotify from './lib/canNotify.js'
 
 let verified = false
 

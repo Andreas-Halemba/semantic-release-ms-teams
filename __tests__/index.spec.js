@@ -1,7 +1,7 @@
-import { verifyConditions, generateNotes, success } from "../index.js"
-import lifecycleVerifyConditions from "../lib/lifecycle-verify-conditions"
-import lifecycleSuccess from "../lib/lifecycle-success"
-import canNotify from "../lib/canNotify"
+import { verifyConditions, generateNotes, success } from '../index.js'
+import lifecycleVerifyConditions from '../lib/lifecycle-verify-conditions'
+import lifecycleSuccess from '../lib/lifecycle-success'
+import canNotify from '../lib/canNotify'
 
 jest.mock('../lib/lifecycle-verify-conditions', () => jest.fn())
 jest.mock('../lib/lifecycle-success', () => jest.fn())

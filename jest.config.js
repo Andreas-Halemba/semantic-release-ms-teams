@@ -34,7 +34,7 @@ export default {
   coverageProvider: 'v8',
 
   transform: {
-    "^.+\\.js$": "babel-jest"
+    '^.+\\.js$': 'babel-jest'
   }
 
   // A list of reporter names that Jest uses when writing coverage reports

@@ -8,7 +8,8 @@
   "plugins": ["jest", "fetch"],
   "extends": ["eslint:recommended", "plugin:jest/recommended", "plugin:fetch/recommended"],
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
   "rules": {
     "indent": ["error", 2],
