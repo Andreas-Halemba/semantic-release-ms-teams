@@ -40,17 +40,6 @@ const NPM = [
   },
 ]
 
-// Creates a GitHub release titled and tagged with the new version. The release notes
-// are used in the description and the tarball created in the previous step is included
-// as the release binary. It also adds a comment to any Issues and Pull Requests linked
-// in the commit message.
-const GITHUB = [
-  '@semantic-release/github',
-  {
-    assets: 'release/*.tgz',
-  },
-]
-
 // Commits the files modified in the previous steps (CHANGELOG.md, package.json, and
 // package-lock.json) back to the repository. The commit is tagged with vMAJOR.MINOR.PATCH
 // and the commit message body includes the generated release notes.
@@ -62,5 +51,5 @@ const TEAMS = 'semantic-release-ms-teams'
 
 module.exports = {
   branches: ['main', { name: 'next', prerelease: true }],
-  plugins: [COMMIT_ANALYZER, RELEASE_NOTES_GENERATOR, CHANGELOG, NPM, GITHUB, GIT, TEAMS],
+  plugins: [COMMIT_ANALYZER, RELEASE_NOTES_GENERATOR, CHANGELOG, NPM, GIT, TEAMS],
 }
