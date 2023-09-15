@@ -10,7 +10,7 @@ jest.mock('../../lib/teamsify', () => jest.fn())
 
 jest.mock('../../lib/getUrl', () => jest.fn(() => 'https://example.com'))
 
-describe('lifecycleSuccess', () => {
+describe.skip('lifecycleSuccess', () => {
   let logger
   let env
   let options

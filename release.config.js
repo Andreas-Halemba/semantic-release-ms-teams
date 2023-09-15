@@ -47,9 +47,9 @@ const NPM = [
 const GIT = '@semantic-release/git'
 
 // Publishes release note in a Teams channel (specified in the repository's secrets)
-const TEAMS = 'semantic-release-ms-teams'
+const TEAMS = '@iu/semantic-release-ms-teams'
 
-module.exports = {
+export default {
   branches: ['main', { name: 'next', prerelease: true }],
   plugins: [COMMIT_ANALYZER, RELEASE_NOTES_GENERATOR, CHANGELOG, NPM, GIT, TEAMS],
 }
