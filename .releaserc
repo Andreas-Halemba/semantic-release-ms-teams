@@ -3,8 +3,128 @@
         "main"
     ],
     "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "conventionalcommits",
+                "releaseRules": [
+                    {
+                        "type": "docs",
+                        "scope": "README",
+                        "release": "patch"
+                    },
+                    {
+                        "type": "chore",
+                        "release": "patch"
+                    },
+                    {
+                        "type": "refactor",
+                        "release": "patch"
+                    },
+                    {
+                        "scope": "no-release",
+                        "release": false
+                    }
+                ],
+                "presetConfig": {
+                    "types": [
+                        {
+                            "type": "feat",
+                            "section": "Features"
+                        },
+                        {
+                            "type": "fix",
+                            "section": "Bug Fixes"
+                        },
+                        {
+                            "type": "chore",
+                            "section": "Chores"
+                        },
+                        {
+                            "type": "docs",
+                            "hidden": true
+                        },
+                        {
+                            "type": "style",
+                            "hidden": true
+                        },
+                        {
+                            "type": "refactor",
+                            "hidden": true
+                        },
+                        {
+                            "type": "perf",
+                            "hidden": true
+                        },
+                        {
+                            "type": "test",
+                            "hidden": true
+                        }
+                    ]
+                }
+            }
+        ],
+        [
+            "@semantic-release/release-notes-generator",
+            {
+                "preset": "conventionalcommits",
+                "releaseRules": [
+                    {
+                        "type": "docs",
+                        "scope": "README",
+                        "release": "patch"
+                    },
+                    {
+                        "type": "chore",
+                        "release": "patch"
+                    },
+                    {
+                        "type": "refactor",
+                        "release": "patch"
+                    },
+                    {
+                        "scope": "no-release",
+                        "release": false
+                    }
+                ],
+                "presetConfig": {
+                    "types": [
+                        {
+                            "type": "feat",
+                            "section": "Features"
+                        },
+                        {
+                            "type": "fix",
+                            "section": "Bug Fixes"
+                        },
+                        {
+                            "type": "chore",
+                            "hidden": true
+                        },
+                        {
+                            "type": "docs",
+                            "hidden": true
+                        },
+                        {
+                            "type": "style",
+                            "hidden": true
+                        },
+                        {
+                            "type": "refactor",
+                            "hidden": true
+                        },
+                        {
+                            "type": "perf",
+                            "hidden": true
+                        },
+                        {
+                            "type": "test",
+                            "hidden": true
+                        }
+                    ]
+                }
+            }
+        ],
         "@semantic-release/changelog",
         [
             "@semantic-release/git",
@@ -19,7 +139,6 @@
         [
             "@iu/semantic-release-ms-teams",
             {
-                "webhookUrl": "https://iubhfs.webhook.office.com/webhookb2/ac9ae722-5d23-456b-b514-86d0f525dc95@f419c9fe-f7b0-4d87-bee8-e8dfb2190cab/IncomingWebhook/90837faebba146f580ae691ccfcc163a/2e43fea9-4db3-4c55-88fb-26080f20d3b8",
                 "title": "A new version has been released",
                 "showContributors": true,
                 "notifyInDryRun": false
